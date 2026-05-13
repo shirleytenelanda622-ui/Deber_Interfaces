@@ -1,0 +1,69 @@
+Tarea 1: Sistema académico de documentos
+
+Nivel: Medio Producto: proyecto Java Entrega: código + evidencia
+Objetivo: Aplicar una interfaz con tres clases normales.
+Caso de estudio: Una institución necesita imprimir certificados, actas y horarios académicos.
+Interfaz sugerida:
+public interface Imprimible {
+ void imprimir();
+}
+Clases que deben desarrollar:
+• Certificado
+• ActaNotas
+• HorarioAcademico
+Requisitos obligatorios:
+• Cada clase debe implementar Imprimible.
+• Cada clase debe mostrar un mensaje diferente.
+• Crear MainAcademico.
+• Usar @Override en todos los métodos.
+Reto adicional
+Agregar un atributo propio a cada documento, por ejemplo número de documento, carrera o período académico
+
+Tarea 2: Sistema bancario de pagos
+
+Nivel: Medio Producto: proyecto Java Entrega: código + evidencia
+Objetivo: Aplicar interfaz con validación de montos.
+Caso de estudio: Un banco procesa pagos por efectivo, tarjeta y transferencia.
+Interfaz sugerida:
+public interface Pagable {
+ void procesarPago(double monto);
+}
+Clases que deben desarrollar:
+• PagoEfectivo
+• PagoTarjeta
+• Transferencia
+Requisitos obligatorios:
+• Validar que el monto sea mayor a cero.
+• Mostrar mensajes diferentes según el medio de pago.
+• Crear MainPagos.
+• No repetir lógica innecesaria.
+Reto adicional
+Agregar comisión diferente para tarjeta y transferencia.
+
+Tarea 3: Sistema de roles empresariales
+
+Nivel: Avanzado plus Producto: proyecto Java Entrega: código + evidencia
+Objetivo: Diferenciar responsabilidades mediante varias interfaces.
+Caso de estudio: Una empresa tiene cajeros, administradores y supervisores con permisos diferentes.
+Interfaz sugerida:
+public interface Autenticable {
+ boolean iniciarSesion(String usuario, String clave);
+}
+public interface Reportable {
+ void generarReporte();
+}
+public interface Gestionable {
+ void gestionarDatos();
+}
+Clases que deben desarrollar:
+• Cajero
+• Administrador
+• Supervisor
+Requisitos obligatorios:
+• Cajero: Autenticable y Gestionable.
+• Administrador: Autenticable, Reportable y Gestionable.
+• Supervisor: Autenticable y Reportable.
+• Validar usuario y clave.
+• Explicar por qué cada clase implementa interfaces diferentes.
+Reto adicional
+Agregar menú simple para seleccionar rol y ejecutar acciones.
